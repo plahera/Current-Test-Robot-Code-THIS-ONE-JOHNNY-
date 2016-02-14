@@ -31,8 +31,10 @@ void MotorCompare::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void MotorCompare::Execute() {
 	shootJoy= Robot::oi->getDriveJoy();
-	Robot::pIDTestSystem->MovePlainMotor(-1*shootJoy->GetY());
-	Robot::pIDTestSystem->MovePlainMotor2(shootJoy->GetY());
+	//Robot::pIDTestSystem->MovePlainMotor(-1*shootJoy->GetY());
+	//Robot::pIDTestSystem->MovePlainMotor2(shootJoy->GetY());
+	Robot::pIDTestSystem->MovePlainMotor(-1);
+	Robot::pIDTestSystem->MovePlainMotor2(1);
 }
 
 // Make this return true when this Command no longer needs to run execute()
